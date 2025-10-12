@@ -4,20 +4,22 @@ import numpy as np
 #import jax
 #import jax.numpy as jnp
 import scipy
-import edrixs
+import edrixs_python as edrixs
+import sys
+sys.modules['edrixs'] = edrixs
 
 import time
 
-from edrixs.utils import info_atomic_shell, slater_integrals_name
-from edrixs.coulomb_utensor import get_umat_slater
-from edrixs.soc import atom_hsoc
-from edrixs.angular_momentum import (
+from edrixs_python.utils import info_atomic_shell, slater_integrals_name
+from edrixs_python.coulomb_utensor import get_umat_slater
+from edrixs_python.soc import atom_hsoc
+from edrixs_python.angular_momentum import (
     get_sx, get_sy, get_sz, get_lx, get_ly, get_lz)
-from edrixs.fock_basis import get_fock_bin_by_N
-from edrixs.manybody_operator import two_fermion, four_fermion
-from edrixs.photon_transition import (
+from edrixs_python.fock_basis import get_fock_bin_by_N
+from edrixs_python.manybody_operator import two_fermion, four_fermion
+from edrixs_python.photon_transition import (
     get_trans_oper,dipole_polvec_rixs)
-from edrixs.rixs_utils import scattering_mat
+from edrixs_python.rixs_utils import scattering_mat
 
 def saveops(shell_name,v_noccu,*,on_which='spin',loc_axis=None):
     v_name = shell_name[0].strip()

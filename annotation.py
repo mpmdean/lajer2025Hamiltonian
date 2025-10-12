@@ -1,4 +1,6 @@
-import edrixs
+import edrixs_python as edrixs
+import sys
+sys.modules['edrixs'] = edrixs
 import scipy
 import numpy as np
 

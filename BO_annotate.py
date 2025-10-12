@@ -20,7 +20,7 @@ from types import ModuleType
 from typing import Dict, Any,  Optional
 
 from annotation import constructMockH, getWeight, getWeightL
-from edrixs import get_fock_bin_by_N
+from edrixs_python import get_fock_bin_by_N
 
 def load_config_module(path: str) -> ModuleType:
     spec = importlib.util.spec_from_file_location("cfg_module", path)

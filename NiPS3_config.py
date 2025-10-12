@@ -1,4 +1,6 @@
-import edrixs
+import edrixs_python as edrixs
+import sys
+sys.modules['edrixs'] = edrixs
 import numpy as np
 
 #fasten up computations with some parallelization
@@ -14,7 +16,7 @@ rc = ipp.Cluster(n=6).start_and_connect_sync()
 rc.ids
 view=rc[:];
 with view.sync_imports():
-    import edrixs
+    import edrixs_python as edrixs
     import numpy as np
     from utils_from_NiPS import  get_pol, perform_ED_1site, calc_RIXS_Q0
 
@@ -75,18 +77,6 @@ pbounds = {'tenDq': (0.5,4),
            'xoffset':(-12,12)}
 
 rand_seed=np.zeros(num_runs_local,dtype=np.int32)
-
-"""
-        record (dict): Dictionary containing configuration:
-            - name (str): base name for output files
-            - num_runs_global (int): number of scripts run in parallel
-            - num_runs_local (int): number of independent runs in script
-            - num_iters (int): total iterations per run
-            - pbounds (dict): parameter bounds for optimization
-            - rand_seed (list or np.ndarray): placeholder for seeds, will be filled
-            - init_seed (int) initial seed
-"""
-
 
 rixs_funV =  RIXS_runner_NIPS3(view,eloss,omres)
 

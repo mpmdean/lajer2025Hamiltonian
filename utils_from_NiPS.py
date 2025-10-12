@@ -1,7 +1,9 @@
 """ Various utilities copied from NiPS3_edRIXS project """
 
-import edrixs
-from edrixs import scattering_mat
+import edrixs_python as edrixs
+import sys
+sys.modules['edrixs'] = edrixs
+from edrixs_python import scattering_mat
 import numpy as np
 import scipy
 import ipyparallel as ipp

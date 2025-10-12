@@ -1,4 +1,7 @@
-import edrixs
+import edrixs_python as edrixs
+import sys
+sys.modules['edrixs'] = edrixs
+
 import numpy as np
 from solvers_fast import *
 from solvers_fast_double import *
