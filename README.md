@@ -51,7 +51,7 @@ Source code and data files for the manuscript.
 
 How to cite
 -----------
-If this work is used, please cite "Hamiltonian parameter inference from RIXS spectra with active learning", Marton K. Lajer, Xin Dai, Kipton Barros, Matthew R. Carbone, S. Johnston, and M. P. M. Dean
+If this work is used, please cite "Hamiltonian parameter inference from RIXS spectra with active learning", Marton K. Lajer, Xin Dai, Kipton Barros, Matthew R. Carbone, S. Johnston, and M. P. M. Dean, Phys. Rev. B 112, 155167 (2025)
 
 This work is based on data from the papers
 
